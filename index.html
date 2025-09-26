@@ -44,5 +44,22 @@
   <h1>🚀 Bienvenido a la prueba de Fysa</h1>
   <p>Este es un dominio de pruebas en Netlify, conectado con GitHub.</p>
   <a class="button" href="https://www.fysa.es" target="_blank">Ir a la web oficial</a>
+
+  <form name="contacto" method="POST" data-netlify="true">
+    <!-- Campo oculto obligatorio -->
+    <input type="hidden" name="form-name" value="contacto">
+    <p>
+      <label>Nombre: <input type="text" name="nombre" required></label>
+    </p>
+    <p>
+      <label>Email: <input type="email" name="email" required></label>
+    </p>
+    <p>
+      <label>Mensaje: <textarea name="mensaje" required></textarea></label>
+    </p>
+    <p>
+      <button type="submit">Enviar</button>
+    </p>
+  </form>
 </body>
 </html>
