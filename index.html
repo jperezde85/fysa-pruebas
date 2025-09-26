@@ -8,93 +8,67 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #e63946, #1d3557);
-      color: #fff;
-      text-align: center;
+      background: url("https://images.unsplash.com/photo-1588776814546-9e7dc87d0af9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
+      color: #333;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
+      padding: 40px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #f1faee;
-      color: #1d3557;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-      margin-bottom: 2rem;
-    }
-
-    a.button:hover {
-      background: #a8dadc;
-    }
-
-    /* ---- FORMULARIO ---- */
+    /* Contenedor del formulario */
     form {
-      background: #f2f2f2; /* gris clarito */
-      padding: 20px;
-      border-radius: 10px;
-      width: 320px;
+      background: #f2f2f2;
+      padding: 25px;
+      border-radius: 15px;
+      width: 350px;
       max-width: 100%;
-      margin: 20px auto;
-      color: #333;
-      text-align: left;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
 
     form h2 {
       text-align: center;
       margin-bottom: 10px;
+      font-size: 1.5rem;
       color: #222;
     }
 
     form .subtitle {
       text-align: center;
-      font-size: 0.9rem;
-      margin-bottom: 15px;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
       color: #555;
     }
 
     form input,
-    form select,
-    form textarea {
+    form select {
       width: 100%;
       padding: 10px;
       margin-bottom: 12px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
       font-size: 0.95rem;
+    }
+
+    form .two-columns {
+      display: flex;
+      gap: 10px;
     }
 
     form .checkbox {
       font-size: 0.85rem;
-      color: #333;
       margin-bottom: 10px;
+      color: #333;
     }
 
     form button {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       background: #e63946; /* rojo Fysa */
       color: #fff;
       border: none;
-      border-radius: 5px;
+      border-radius: 25px;
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
@@ -107,11 +81,7 @@
   </style>
 </head>
 <body>
-  <h1>🚀 Bienvenido a la prueba de Fysa</h1>
-  <p>Este es un dominio de pruebas en Netlify, conectado con GitHub.</p>
-  <a class="button" href="https://www.fysa.es" target="_blank">Ir a la web oficial</a>
-
-  <!-- FORMULARIO DE NETLIFY -->
+  <!-- FORMULARIO PRINCIPAL -->
   <form name="formacion" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="formacion">
 
@@ -120,25 +90,24 @@
       Solicita información personalizada y descubre las mejores oportunidades de crecimiento profesional
     </p>
 
-    <p>
-      <input type="text" name="nombre" placeholder="Nombre completo" required>
-    </p>
-    <p>
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-    </p>
-    <p>
+    <p><input type="text" name="nombre" placeholder="Nombre completo" required></p>
+    <p><input type="email" name="email" placeholder="Correo electrónico" required></p>
+    
+    <div class="two-columns">
       <input type="tel" name="telefono" placeholder="Teléfono" required>
       <input type="text" name="codigo_postal" placeholder="Código Postal" required>
-    </p>
+    </div>
+
     <p>
       <select name="situacion_laboral" required>
         <option value="">Selecciona tu situación laboral</option>
-        <option value="ocupado">Ocupado</option>
-        <option value="desempleado">Desempleado</option>
+        <option value="empleado">Empleado/a</option>
+        <option value="desempleado">Desempleado/a</option>
         <option value="autonomo">Autónomo</option>
         <option value="otros">Otros</option>
       </select>
     </p>
+
     <p class="checkbox">
       <label>
         <input type="checkbox" name="privacidad" required>
@@ -151,9 +120,8 @@
         Quiero recibir información sobre ofertas especiales y novedades
       </label>
     </p>
-    <p>
-      <button type="submit">Solicitar Información</button>
-    </p>
+
+    <p><button type="submit">Solicitar Información</button></p>
   </form>
 </body>
 </html>
