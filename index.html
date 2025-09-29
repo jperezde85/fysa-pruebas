@@ -3,203 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fysa Pruebas</title>
+  <title>Fysa Formación</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url("fondo_principal_con_frase.png") no-repeat center center/cover;
+      background-color: #fff;
       color: #333;
     }
 
-    /* Barra de navegación */
-    nav {
-      background: #e63946; /* rojo Fysa */
-      padding: 10px 20px;
+    /* Banner superior */
+    .banner {
+      width: 100%;
+      display: block;
     }
 
-    nav ul {
+    /* Barra gris con navegación */
+    .top-bar {
+      background-color: #f0f0f0;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-menu ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
-      gap: 20px;
+      gap: 30px;
     }
 
-    nav ul li {
-      display: inline;
-    }
-
-    nav ul li a {
-      color: #fff;
+    .nav-menu a {
       text-decoration: none;
+      color: #333;
       font-weight: bold;
-      font-size: 0.95rem;
-      transition: color 0.3s;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
     }
 
-    nav ul li a:hover {
-      color: #f1faee;
+    .nav-menu a:hover {
+      background-color: #ddd;
+      border-radius: 5px;
     }
 
-    /* Contenedor principal */
-    .container {
+    /* Contenido principal */
+    .main-content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      min-height: calc(100vh - 50px);
       padding: 40px;
     }
 
-    /* Texto a la izquierda */
-    .texto {
-      max-width: 45%;
-      color: #fff;
-      background: rgba(0,0,0,0.4);
+    /* Formulario */
+    .formulario {
+      background-color: #f9f9f9;
       padding: 20px;
-      border-radius: 10px;
-    }
-
-    .texto h1 {
-      color: #e63946;
-      margin-bottom: 10px;
-    }
-
-    .texto p {
-      line-height: 1.6;
-    }
-
-    /* Formulario a la derecha */
-    form {
-      background: #f2f2f2;
-      padding: 25px;
-      border-radius: 15px;
-      width: 350px;
-      max-width: 100%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-
-    form h2 {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-      color: #222;
-    }
-
-    form .subtitle {
-      text-align: center;
-      font-size: 0.85rem;
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    form input,
-    form select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
       border-radius: 8px;
-      font-size: 0.95rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 350px;
     }
 
-    form .two-columns {
-      display: flex;
-      gap: 10px;
+    .formulario h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #444;
     }
 
-    form .checkbox {
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    form button {
-      width: 100%;
-      padding: 14px;
-      background: #e63946; /* rojo Fysa */
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      font-size: 1rem;
+    .formulario label {
+      display: block;
+      margin: 10px 0 5px;
+      font-size: 14px;
       font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
     }
 
-    form button:hover {
-      background: #b92d38;
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .formulario button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .formulario button:hover {
+      background-color: #555;
     }
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Quiénes somos</a></li>
-      <li><a href="#">Cursos</a></li>
-      <li><a href="#">Promociones</a></li>
-      <li><a href="#">Oposiciones</a></li>
-      <li><a href="#">Contacto</a></li>
-      <li><a href="#">FAQs</a></li>
-    </ul>
-  </nav>
 
-  <!-- CONTENEDOR PRINCIPAL -->
-  <div class="container">
-    <!-- Texto a la izquierda -->
-    <div class="texto">
-      <h1>Formación y Servicios</h1>
-      <p>
-        Líder en formación sanitaria y consultoría empresarial. <br>
-        Especializados en seguridad laboral, gestión de calidad y desarrollo profesional.
-      </p>
+  <!-- Imagen principal -->
+  <header>
+    <img src="fondo_principal_con_frase.jpg" alt="Fondo principal con frase" class="banner">
+
+    <!-- Barra gris con menú -->
+    <div class="top-bar">
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#calendario">Calendario</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#documentos">Documentos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <div class="info">
+      <h1>Bienvenido a Fysa Formación</h1>
+      <p>Aquí podrás encontrar toda la información sobre nuestros planes de formación, calendarios de cursos y documentación.</p>
     </div>
 
-    <!-- Formulario a la derecha -->
-    <form name="formacion" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="formacion">
+    <!-- Formulario -->
+    <div class="formulario">
+      <h2>Solicita información</h2>
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-      <h2>Comienza tu Formación</h2>
-      <p class="subtitle">
-        Solicita información personalizada y descubre las mejores oportunidades de crecimiento profesional
-      </p>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
 
-      <p><input type="text" name="nombre" placeholder="Nombre completo" required></p>
-      <p><input type="email" name="email" placeholder="Correo electrónico" required></p>
-      
-      <div class="two-columns">
-        <input type="tel" name="telefono" placeholder="Teléfono" required>
-        <input type="text" name="codigo_postal" placeholder="Código Postal" required>
-      </div>
-
-      <p>
-        <select name="situacion_laboral" required>
-          <option value="">Selecciona tu situación laboral</option>
-          <option value="empleado">Empleado/a</option>
-          <option value="desempleado">Desempleado/a</option>
-          <option value="autonomo">Autónomo</option>
-          <option value="otros">Otros</option>
+        <label for="curso">Curso de interés</label>
+        <select id="curso" name="curso" required>
+          <option value="">Seleccione un curso</option>
+          <option value="curso1">Curso 1</option>
+          <option value="curso2">Curso 2</option>
+          <option value="curso3">Curso 3</option>
         </select>
-      </p>
 
-      <p class="checkbox">
-        <label>
-          <input type="checkbox" name="privacidad" required>
-          Acepto la Política de Privacidad y autorizo el tratamiento de mis datos para recibir información comercial
-        </label>
-      </p>
-      <p class="checkbox">
-        <label>
-          <input type="checkbox" name="ofertas">
-          Quiero recibir información sobre ofertas especiales y novedades
-        </label>
-      </p>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
 
-      <p><button type="submit">Solicitar Información</button></p>
-    </form>
-  </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+
 </body>
 </html>
