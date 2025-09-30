@@ -8,19 +8,31 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url("fondo_sin_margen_blanco.png") no-repeat center top/cover;
+      background: url("fondo.png") no-repeat center top/cover; /* tu nueva imagen limpia */
       color: #333;
     }
 
-    /* NAVBAR simple (texto blanco sobre el rojo de la imagen) */
+    /* HEADER BLANCO CON IMÁGENES */
+    header {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+    }
+
+    header a img {
+      max-height: 60px;  /* tamaño ajustable */
+      display: block;
+    }
+
+    /* NAVBAR rojo con botones */
     nav {
+      background: #e63946;   /* rojo Fysa */
       width: 100%;
       display: flex;
       justify-content: center;
-      padding: 15px 0;
-      position: absolute; /* colocado sobre la franja roja de la imagen */
-      top: 0;
-      left: 0;
+      padding: 12px 0;
     }
 
     nav ul {
@@ -32,7 +44,7 @@
     }
 
     nav ul li a {
-      color: #fff; /* texto en blanco */
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
@@ -48,7 +60,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: calc(100vh - 55px);
+      min-height: calc(100vh - 120px); /* restamos header + navbar */
       padding: 40px;
     }
 
@@ -70,7 +82,7 @@
       line-height: 1.6;
     }
 
-    /* Formulario a la derecha */
+    /* Formulario a la derecha (tal como ya lo tienes) */
     form {
       background: #f2f2f2;
       padding: 25px;
@@ -99,8 +111,7 @@
     }
 
     form input,
-    form select,
-    form textarea {
+    form select {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
@@ -139,7 +150,7 @@
     form button {
       width: 100%;
       padding: 14px;
-      background: #e63946; /* rojo Fysa */
+      background: #e63946;
       color: #fff;
       border: none;
       border-radius: 25px;
@@ -156,7 +167,17 @@
 </head>
 <body>
 
-  <!-- NAVBAR integrado en la franja roja de la imagen -->
+  <!-- HEADER BLANCO con imágenes -->
+  <header>
+    <a href="https://enlace1.com" target="_blank">
+      <img src="logo1.png" alt="Logo 1">
+    </a>
+    <a href="https://enlace2.com" target="_blank">
+      <img src="logo2.png" alt="Logo 2">
+    </a>
+  </header>
+
+  <!-- NAVBAR rojo -->
   <nav>
     <ul>
       <li><a href="#">Inicio</a></li>
