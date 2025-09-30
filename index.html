@@ -8,17 +8,19 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url("fondo_principal_con_frase.png") no-repeat center center/cover;
+      background: url("fondo_margen_blanco.png") no-repeat center top/cover;
       color: #333;
     }
 
-    /* NAVBAR con barra roja real */
+    /* NAVBAR simple (texto blanco sobre el rojo de la imagen) */
     nav {
-      background: #e63946;   /* rojo Fysa */
-      height: 50px;
+      width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      padding: 15px 0;
+      position: absolute; /* se coloca sobre la franja roja de la imagen */
+      top: 0;
+      left: 0;
     }
 
     nav ul {
@@ -46,7 +48,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: calc(100vh - 50px);
+      min-height: calc(100vh - 55px);
       padding: 40px;
     }
 
@@ -127,8 +129,8 @@
     }
 
     form .checkbox input[type="checkbox"] {
-      margin-top: 2px;
-      transform: scale(1.1);
+      margin-top: 3px;
+      flex-shrink: 0;
     }
 
     form button {
@@ -151,7 +153,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR con barra roja real -->
+  <!-- NAVBAR integrado en la franja roja de la imagen -->
   <nav>
     <ul>
       <li><a href="#">Inicio</a></li>
