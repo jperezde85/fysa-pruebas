@@ -18,7 +18,7 @@
       display: flex;
       justify-content: center;
       padding: 15px 0;
-      position: absolute; /* se coloca sobre la franja roja de la imagen */
+      position: absolute; /* colocado sobre la franja roja de la imagen */
       top: 0;
       left: 0;
     }
@@ -126,6 +126,9 @@
       font-size: 0.85rem;
       color: #333;
       line-height: 1.4;
+      width: 100%;
+      box-sizing: border-box;
+      flex-wrap: wrap;
     }
 
     form .checkbox input[type="checkbox"] {
@@ -204,12 +207,12 @@
 
       <label class="checkbox">
         <input type="checkbox" name="privacidad" required>
-        Acepto la Política de Privacidad y autorizo el tratamiento de mis datos para recibir información comercial
+        <span>Acepto la Política de Privacidad y autorizo el tratamiento de mis datos para recibir información comercial</span>
       </label>
 
       <label class="checkbox">
         <input type="checkbox" name="ofertas">
-        Quiero recibir información sobre ofertas especiales y novedades
+        <span>Quiero recibir información sobre ofertas especiales y novedades</span>
       </label>
 
       <button type="submit">Solicitar Información</button>
