@@ -12,18 +12,17 @@
       color: #333;
     }
 
-    /* Barra roja con menú integrado */
-    .barra-roja {
-      background: #e63946; /* rojo Fysa */
-      height: 55px;        /* ajusta la altura a tu franja */
+    /* NAVBAR sin barra propia, integrado en la franja roja del diseño */
+    nav { /* NUEVO */
+      position: absolute; /* se coloca encima de la franja roja existente */
+      top: 0;             /* ajusta según dónde empiece tu franja */
+      width: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      margin: 0;
-      padding: 0;
+      padding: 15px 0;   /* da espacio interior */
     }
 
-    .barra-roja nav ul {
+    nav ul { /* NUEVO */
       list-style: none;
       margin: 0;
       padding: 0;
@@ -31,15 +30,15 @@
       gap: 25px;
     }
 
-    .barra-roja nav ul li a {
-      color: #fff;
+    nav ul li a { /* NUEVO */
+      color: #fff; /* texto en blanco */
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
       transition: color 0.3s;
     }
 
-    .barra-roja nav ul li a:hover {
+    nav ul li a:hover { /* NUEVO */
       color: #f1faee;
     }
 
@@ -119,18 +118,18 @@
     }
 
     /* Checkboxes alineados */
-    form .checkbox {
+    form .checkbox { /* NUEVO */
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: flex-start;
+      gap: 8px;
       font-size: 0.85rem;
       color: #333;
       line-height: 1.4;
     }
 
-    form .checkbox input[type="checkbox"] {
-      margin: 0;
-      transform: scale(1.1); /* opcional: agranda un poco las casillas */
+    form .checkbox input[type="checkbox"] { /* NUEVO */
+      margin-top: 2px;
+      transform: scale(1.1);
     }
 
     form button {
@@ -153,20 +152,18 @@
 </head>
 <body>
 
-  <!-- BARRA ROJA CON NAV -->
-  <div class="barra-roja">
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Quiénes somos</a></li>
-        <li><a href="#">Cursos</a></li>
-        <li><a href="#">Promociones</a></li>
-        <li><a href="#">Oposiciones</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </nav>
-  </div>
+  <!-- NAVBAR integrado en la franja roja del diseño -->
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Quiénes somos</a></li>
+      <li><a href="#">Cursos</a></li>
+      <li><a href="#">Promociones</a></li>
+      <li><a href="#">Oposiciones</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">FAQs</a></li>
+    </ul>
+  </nav>
 
   <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
